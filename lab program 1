@@ -1,0 +1,67 @@
+Schema SQL
+1 create table BOOK(Book_id integer primary key, Title varchar(20),Publisher_Name varchar(20),Pub_Year varchar(20));
+2
+   insert into BOOK values(01,'DBMS','AAA','2011');
+3
+   insert into BOOK values(02,'ADP','BBB','2012');
+4
+   insert into BOOK values(03,'ATC','CCC','2013');
+5
+    insert  into BOOK values(04,'ME','DDD','2014');
+6  
+    insert into BOOK values(05,'CNS','EEE','2015');
+7
+    create table BOOK_CPOIES(Book_id integer,Branch_id integer,No_of_Copies integer,primary key(Book_id,Branch_id));  
+    
+    
+   Query SQL
+1 select * from BOOK;
+2 select * from BOOK_CPOIES; 
+
+
+Results
+**Schema (MySQL v5.7)**
+
+    create table BOOK(Book_id integer primary key, Title varchar(20),Publisher_Name varchar(20),Pub_Year varchar(20));
+                                                                                          insert into BOOK values(01,'DBMS','AAA','2011');
+                                                                                          insert into BOOK values(02,'ADP','BBB','2012');
+                                                                                          insert into BOOK values(03,'ATC','CCC','2013');
+                                                                                          insert  into BOOK values(04,'ME','DDD','2014');
+                                                                                          insert into BOOK values(05,'CNS','EEE','2015');
+                                                                                          create table BOOK_CPOIES(Book_id integer,Branch_id
+                                                                                          integer,No_of_Copies integer,primary key(Book_id,Branch_id));
+
+---
+
+**Query #1**
+
+    select * from BOOK;
+
+| Book_id | Title | Publisher_Name | Pub_Year |
+| ------- | ----- | -------------- | -------- |
+| 1       | DBMS  | AAA            | 2011     |
+| 2       | ADP   | BBB            | 2012     |
+| 3       | ATC   | CCC            | 2013     |
+| 4       | ME    | DDD            | 2014     |
+| 5       | CNS   | EEE            | 2015     |
+
+---
+**Query #2**
+
+    select * from BOOK_CPOIES;
+
+There are no results to be displayed.
+
+---
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/ud7sNFGGqNMgSr2c8vvckV/0)
+Copy as Markdown
+Query #1 Execution time: 1ms
+Book_id	Title	Publisher_Name	Pub_Year
+1	DBMS	AAA	2011
+2	ADP	BBB	2012
+3	ATC	CCC	2013
+4	ME	DDD	2014
+5	CNS	EEE	2015
+Query #2 Execution time: 0ms
+There are no results to be displayed.
